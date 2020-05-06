@@ -16,13 +16,14 @@ pipeline {
 			]]) {
 					sh 'echo `date`'
 					sh 'terraform init -var accessKey=${AWS_ACCESS_KEY_ID} -var secretKey=${AWS_SECRET_ACCESS_KEY}'	
-					sh 'terraform plan -var accessKey=${AWS_ACCESS_KEY_ID} -var secretKey=${AWS_SECRET_ACCESS_KEY}'
+					sh 'terraform plan -var accessKey=${AWS_ACCESS_KEY_ID} -var secretKey=${AWS_SECRET_ACCESS_KEY}' 
+				        sh 'terraform apply -var accessKey=${AWS_ACCESS_KEY_ID} -var secretKey=${AWS_SECRET_ACCESS_KEY} -auto-approve'
 				}
 			
 		}
 	}
   }
-     stages {
+     /*stages {
        stage('apply') {
 	      steps {
 			withCredentials([[
@@ -38,7 +39,7 @@ pipeline {
 			}
 	     }
       }
-	}
+	}*/
     /*stage('approval') {
       options {
         timeout(time: 0.5, unit: 'MINUTES') 
