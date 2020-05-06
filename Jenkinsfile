@@ -22,7 +22,7 @@ pipeline {
 		}
 	}
     }
-	stages {
+    stages {
       stage('apply') {
 	     steps {
 			withCredentials([[
