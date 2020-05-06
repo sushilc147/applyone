@@ -30,4 +30,3 @@ pipeline {
         //input 'approve the plan to proceed and apply'
       //}
     }
-}
