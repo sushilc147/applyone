@@ -22,9 +22,9 @@ pipeline {
 		}
 	}
   }
-    stages {
-      stage('apply') {
-	     steps {
+     stages {
+       stage('apply') {
+	      steps {
 			withCredentials([[
 				$class: 'AmazonWebServicesCredentialsBinding',
 				credentialsId: 'arpanCredentials',
