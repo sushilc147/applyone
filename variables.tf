@@ -1,20 +1,24 @@
-variable "instance_count" {
-  default = 1
+# Use AWS Terraform provider
+variable "accessKey" {
+  type        = "string"
+  description = "AWS access key id"
+  default = "missing"
 }
 
-variable "key_name" {
-  description = "Private key name to use with instance"
-  default     = "terraform"
+variable "secretKey" {
+  type        = "string"
+  description = "AWS access secret key"
+  default = "missing"
 }
 
-variable "instance_type" {
-  description = "AWS instance type"
-  default     = "t2.micro"
+provider "aws" {
+ access_key = "${var.accessKey}"
+  secret_key = "${var.secretKey}"
+  region     = "us-east-2"
 }
-
-variable "region" {
-description = "AWS region for hosting our your network"
-default = "us-east-2"
+resource "aws_instance" "example" {
+  ami           = "ami-be7753db"
+  instance_type = "t2.micro"
 }
 
 variable "vpc_cidr" {
@@ -30,9 +34,4 @@ default     = "10.0.1.0/24"
 variable "private_subnet_cidr" {
 description = "CIDR for private subnet"
 default     = "10.0.2.0/24"
-}
-
-variable "amis" {
-description = "Base AMI to launch the instances"
-default = "ami-be7753db"
 }
