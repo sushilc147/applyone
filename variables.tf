@@ -1,6 +1,6 @@
 # Use AWS Terraform provider
 variable "accessKey" {
-  type        = "string"
+  type        = string
   description = "AWS access key id"
   default = "missing"
 }
