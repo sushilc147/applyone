@@ -12,10 +12,9 @@ variable "secretKey" {
 }
 
 provider "aws" {
- access_key = "${var.accessKey}"
-  secret_key = "${var.secretKey}"
   region     = "us-east-2"
 }
+
 resource "aws_instance" "example" {
   ami           = "ami-be7753db"
   instance_type = "t2.micro"
