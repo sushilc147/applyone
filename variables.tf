@@ -6,7 +6,7 @@ variable "accessKey" {
 }
 
 variable "secretKey" {
-  type        = string
+  type        = "${string}"
   description = "AWS access secret key"
   default = "missing"
 }
