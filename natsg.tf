@@ -12,7 +12,7 @@ ingress {
 from_port = 443
 to_port = 443
 protocol = "tcp"
-cidr_blocks = [var.private_subnet_cidr] 
+cidr_blocks = ["${var.private_subnet_cidr}"] 
 }
 ingress {
 from_port = 22
