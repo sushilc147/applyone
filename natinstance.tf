@@ -1,4 +1,4 @@
-resource "aws_instance" "nat" {
+/*resource "aws_instance" "nat" {
 ami = "ami-be7753db" # this is a special ami preconfigured to do NAT
 availability_zone = "us-east-2b"
 instance_type = "t2.micro"
@@ -10,4 +10,4 @@ source_dest_check = false
 tags = {
 Name = "NAT instance"
 }
-}
+}*/
