@@ -1,4 +1,4 @@
-resource "aws_security_group" "web" {
+/*resource "aws_security_group" "web" {
 name = "vpc_web"
 description = "Accept incoming connections."
 
@@ -33,4 +33,4 @@ vpc_id = "${aws_vpc.default.id}"
 tags = {
 Name = "WebServerSG"
 }
-}
+}*/
