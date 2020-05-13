@@ -1,4 +1,4 @@
-resource "aws_route_table" "web-public-rt" {
+/*resource "aws_route_table" "web-public-rt" {
   vpc_id = "${aws_vpc.default.id}"
 
   route {
@@ -32,4 +32,4 @@ resource "aws_route_table" "web-private-rt" {
 resource "aws_route_table_association" "web-private-rt" {
   subnet_id = "${aws_subnet.private-subnet.id}"
   route_table_id = "${aws_route_table.web-private-rt.id}"
-}
+}*/
