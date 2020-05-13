@@ -1,4 +1,4 @@
-resource "aws_instance" "db-1" {
+/*resource "aws_instance" "db-1" {
 ami = "ami-be7753db"
 availability_zone = "us-east-2b"
 instance_type = "t2.micro"
@@ -9,4 +9,4 @@ source_dest_check = false
 tags = {
 Name = "Database Server"
 }
-}
+}*/
