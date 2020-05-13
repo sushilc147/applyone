@@ -1,4 +1,4 @@
-/*resource "aws_s3_bucket" "terraform_state" {
+resource "aws_s3_bucket" "terraform_state" {
   bucket = "adk-state"
    Enable versioning so we can see the full revision history of our state files
   versioning {
@@ -22,4 +22,4 @@ resource "aws_dynamodb_table" "terraform_locks" {
    name = "LockID"
     type = "S"
   }
-}*/
+}
