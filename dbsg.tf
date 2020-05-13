@@ -1,4 +1,4 @@
-resource "aws_security_group" "db" {
+/*resource "aws_security_group" "db" {
 name = "vpc_db"
 description = "Accept incoming database connections."
 
@@ -40,4 +40,4 @@ vpc_id = "${aws_vpc.default.id}"
 tags = {
 Name = "DBServerSG"
 }
-}
+}*/
