@@ -1,4 +1,4 @@
-resource "aws_security_group" "nat" {
+/*resource "aws_security_group" "nat" {
 name = "vpc_nat"
 description = "NAT security group"
 
@@ -57,4 +57,4 @@ vpc_id = "${aws_vpc.default.id}"
 tags = {
 Name = "NATSG"
 }
-}
+}*/
